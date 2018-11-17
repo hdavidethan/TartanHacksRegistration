@@ -19,10 +19,10 @@ function calculateStats(){
       },
       schools: {},
       year: {
-        '2016': 0,
-        '2017': 0,
-        '2018': 0,
         '2019': 0,
+        '2020': 0,
+        '2021': 0,
+        '2022': 0,
       }
     },
 
@@ -56,6 +56,12 @@ function calculateStats(){
     },
 
     dietaryRestrictions: {},
+
+    experience: {
+      '0': 0,
+      '1~3': 0,
+      '4+': 0
+    },
 
     hostNeededFri: 0,
     hostNeededSat: 0,
@@ -154,6 +160,11 @@ function calculateStats(){
         // Count shirt sizes
         if (user.confirmation.shirtSize in newStats.shirtSizes){
           newStats.shirtSizes[user.confirmation.shirtSize] += 1;
+        }
+
+        //count experience
+        if (user.confirmation.experience in newStats.experiences) {
+          newStats.experiences[user.confirmation.experience] += 1;
         }
 
         // Host needed counts
