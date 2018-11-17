@@ -1,0 +1,10 @@
+# Project
+db/
+node_modules/
+
+# Output
+app/client/build/
+
+# macOS
+.DS_Store
+.python-version
