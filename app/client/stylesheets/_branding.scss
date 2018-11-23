@@ -4,12 +4,12 @@
  * tertiary (default blue): waitlist/declined dashboard status
  */
 
-$primary: #e76482;
-$secondary: #473899;
-$tertiary: #4c82cc;
+$primary: rgb(66, 73, 94);
+$secondary: rgb(228, 208, 227);
+$tertiary: rgb(119, 172, 175);
 
 /** ASSET URLS
- * login-bg: image for login splash page 
+ * login-bg: image for login splash page
  */
 
-$login-bg: url('https://s3.amazonaws.com/hackmit-assets/tintedphoto_1920_1080_low.jpg');
+$login-bg: rgb(228, 208, 227);

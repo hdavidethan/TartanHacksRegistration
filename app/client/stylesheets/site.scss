@@ -1,11 +1,12 @@
 @import 'branding';
 @import 'custom';
-$font-body: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
-$font-header: 'Montserrat', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+$font-body: 'Ostrich Sans Medium', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-header: 'Ostrich Sans Heavy', 'Helvetica Neue', 'Helvetica', sans-serif;
 
 // Login screen variables
 $login-bg-color: $secondary;
-$login-color: $primary;
+$login-color: rgb(228, 208, 227);
 $register-color: $tertiary;
 
 $status-unverified-color: rgb(82, 82, 82);
@@ -60,13 +61,18 @@ body {
 
 body {
   margin: 0;
-  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'Ostrich Sans Medium', 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-weight: 300;
 
   > .container {
     width: 100%;
     height: 100%;
   }
+}
+
+#footer {
+  position: relative;
+  margin: auto;
 }
 
 /**
@@ -82,6 +88,7 @@ body {
 .ui.segment {
   border-radius: 0;
   box-shadow: none;
+  background-color: rgb(66, 73, 94);
 }
 input {
   border-radius: 0 !important;
@@ -111,6 +118,10 @@ input {
   }
 }
 
+.ui.form .field>label {
+  color: rgb(228, 208, 227);
+}
+
 .ui.form select {
   height: 2.5em;
 }
@@ -124,3 +135,7 @@ fieldset {
   width: 100%;
 }
 // @import 'animation';
+
+#email, #password, #login-password, #register {
+  font-family: $font-body;
+}

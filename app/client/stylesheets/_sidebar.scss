@@ -21,7 +21,7 @@
     &.active {
       background: lighten($sidebar-color, 4%);
       opacity: 1;
-      border-left: 8px solid lighten($sidebar-color, 10%);
+      border-bottom: 1px solid rgb(228, 208, 227);
     }
     &:hover {
       cursor: pointer;
