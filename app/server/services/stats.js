@@ -57,7 +57,7 @@ function calculateStats(){
 
     dietaryRestrictions: {},
 
-    experience: {
+    experiences: {
       '0': 0,
       '1~3': 0,
       '4+': 0
