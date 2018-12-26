@@ -26,7 +26,7 @@
                  name="name"
                  ng-model="user.profile.name">
         </div>
-
+<!--
         <div class="field" ng-show="autoFilledSchool">
           <label> College within CMU </label>
           <input class="ui input"
@@ -44,7 +44,23 @@
             <div class="results"></div>
           </div>
         </div>
-
+      -->
+      
+        <div class="field">
+          <label>College within CMU</label>
+          <select
+            name="school"
+            ng-model="user.profile.school">
+            <option value="">College within CMU</option>
+            <option value="SCS">SCS</option>
+            <option value="CIT">CIT</option>
+            <option value="CFA">CFA</option>
+            <option value="Dietrich">Dietrich</option>
+            <option value="MCS">MCS</option>
+            <option value="Tepper">Tepper</option>
+          </select>
+        </div>
+      
         <div class="field">
           <label>Graduation Year</label>
           <select

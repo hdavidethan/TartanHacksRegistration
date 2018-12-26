@@ -88,7 +88,7 @@
                name="name"
                ng-model="selectedUser.profile.name">
       </div>
-
+<!--
       <div class="field" ng-show="autoFilledSchool">
         <label> School </label>
         <input class="ui input"
@@ -102,6 +102,22 @@
         <input class="ui input"
                name="school"
                ng-model="selectedUser.profile.school">
+      </div>
+    -->
+
+      <div class="field">
+        <label>College within CMU</label>
+        <select
+          name="school"
+          ng-model="selectedUser.profile.school">
+          <option value="">College within CMU</option>
+          <option value="SCS">SCS</option>
+          <option value="CIT">CIT</option>
+          <option value="CFA">CFA</option>
+          <option value="Dietrich">Dietrich</option>
+          <option value="MCS">MCS</option>
+          <option value="Tepper">Tepper</option>
+        </select>
       </div>
 
       <div class="field">
