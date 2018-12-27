@@ -31,7 +31,7 @@ function calculateStats(){
     submitted: 0,
     admitted: 0,
     confirmed: 0,
-    confirmedMit: 0,
+    confirmedCmu: 0,
     declined: 0,
 
     confirmedFemale: 0,
