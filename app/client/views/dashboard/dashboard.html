@@ -1,18 +1,14 @@
 <div id="dashboard" class="page">
-  <div class="divided title">
-    Dashboard
-  </div>
-
   <div class="ui stackable centered page grid">
     <div class="column">
       <div class="ui status segment">
-        <div class="small title">
+        <div class="small">
           Your status:
         </div>
         <br>
 
         <div
-          class="state"
+          class="state title"
           ng-class="user.status.name"
           ng-if="!showWaitlist && !dashState('admittedAndCannotConfirm')">
           {{user.status.name}}
@@ -62,19 +58,23 @@
         <div
           ng-class="settings.timeClose"
           ng-if="!dashState('admittedAndCanConfirm') || !dashState('admittedAndCannotConfirm') || !dashState('confirmed') || !dashState('declined')">
+          <p class='deadline'>
           <strong>
             Registration Deadline:
           </strong>
           {{ timeClose }}
+          </p>
         </div>
 
         <div
           ng-class="settings.timeConfirm"
           ng-if="dashState('admittedAndCanConfirm') || dashState('admittedAndCannotConfirm') || dashState('confirmed') || dashState('declined')">
+          <p class='deadline'>
           <strong>
             Confirmation Deadline:
           </strong>
           {{ timeConfirm }}
+          </p>
         </div>
 
         <div
@@ -89,7 +89,7 @@
             {{ DASHBOARD.INCOMPLETE }}
           </p>
 
-          <div class="ui purple button"
+          <div class="ui button"
                ui-sref="app.application">
             Complete your application
           </div>
