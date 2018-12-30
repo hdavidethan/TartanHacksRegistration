@@ -12,19 +12,12 @@
 
   <div ui-sref-active="active"
        ui-sref="app.dashboard"
-       class="item">
+       class="item"
+       ng-show="!currentUser.admin">
     Register
   </div>
 
   <div ng-show="currentUser.verified">
-
-    <div
-      ui-sref-active="active"
-      ui-sref="app.team"
-      ng-show="!currentUser.status.declined"
-      class="item">
-      Team
-    </div>
 
     <div
       ui-sref-active="active"
@@ -34,6 +27,16 @@
       Admin
     </div>
 
+  </div>
+
+  <div ui-sref-active="active"
+       class="item">
+    FAQ
+  </div>
+
+  <div ui-sref-active="active"
+       class="item">
+    Schedule
   </div>
 
   <div class="item"
