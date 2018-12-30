@@ -1,7 +1,26 @@
+#base > .content > .container {
+  background: url(../assets/images/tealbackground.png);
+  background-size: cover;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  padding: 2rem;
+}
+
 #application {
-  #school .title {
-    text-align: left;
-    text-transform: none;
-    letter-spacing: 0;
+  .title {
+    margin: 2rem;
+  }
+  select, input {
+    font-family: "Ostrich Sans Medium","Helvetica Neue",Helvetica,sans-serif;
+  }
+  input::placeholder {
+    color: rgba(0,0,0,.87);
+  }
+
+  .button {
+    color: $primary;
+    background: $secondary;
+    font-family: "Ostrich Sans Medium","Helvetica Neue",Helvetica,sans-serif;
   }
 }

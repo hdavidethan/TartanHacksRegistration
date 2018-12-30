@@ -1,5 +1,5 @@
 <div id="application" class="page">
-  <div class="divided title">
+  <div class="title">
     Application
   </div>
 
@@ -7,50 +7,28 @@
     <div class="column">
       <div class="ui form"
             ng-class="{'loading': loading}">
-
-        <div class="divided title">Basic Information</div>
-
         <fieldset ng-disabled="regIsClosed">
 
         <div class="field">
-          <label> Email </label>
           <input type="email"
                  name="email"
                  disabled="disabled"
-                 ng-model="user.email">
+                 ng-model="user.email"
+                 placeholder="email">
         </div>
 
         <div class="field">
-          <label> Full Name </label>
           <input type="text"
                  name="name"
-                 ng-model="user.profile.name">
-        </div>
-<!--
-        <div class="field" ng-show="autoFilledSchool">
-          <label> College within CMU </label>
-          <input class="ui input"
-                 disabled="disabled"
-                 ng-show="autoFilledSchool"
-                 ng-model="user.profile.school">
+                 ng-model="user.profile.name"
+                 placeholder="Full Name">
         </div>
 
-        <div class="field" ng-show="!autoFilledSchool">
-          <label> College within CMU </label>
-          <div id="school" class="ui search">
-            <div class="ui input">
-              <input class="prompt" type="text" placeholder="School" name="school" ng-model="user.profile.school">                
-            </div>
-            <div class="results"></div>
-          </div>
-        </div>
-      -->
-      
         <div class="field">
-          <label>College within CMU</label>
           <select
             name="school"
-            ng-model="user.profile.school">
+            ng-model="user.profile.school"
+            placeholder="College within CMU">
             <option value="">College within CMU</option>
             <option value="SCS">SCS</option>
             <option value="CIT">CIT</option>
@@ -60,12 +38,12 @@
             <option value="Tepper">Tepper</option>
           </select>
         </div>
-      
+
         <div class="field">
-          <label>Graduation Year</label>
           <select
             name="year"
-            ng-model="user.profile.graduationYear">
+            ng-model="user.profile.graduationYear"
+            placeholder="Graduation Year">
             <option value="">Graduation Year</option>
             <option value="2019">2019</option>
             <option value="2020">2020</option>
@@ -75,10 +53,10 @@
         </div>
 
         <div class="field">
-          <label>Gender</label>
           <select
             name="gender"
-            ng-model="user.profile.gender">
+            ng-model="user.profile.gender"
+            placeholder="gender">
             <option value="">Gender</option>
             <option value="M">Male</option>
             <option value="F">Female</option>
@@ -91,7 +69,7 @@
 
         <div class="field" ng-hide="regIsClosed">
           <button type="submit"
-                  class="fluid ui purple button"
+                  class="fluid ui button"
                   ng-click="submitForm()">
             Submit
           </button>

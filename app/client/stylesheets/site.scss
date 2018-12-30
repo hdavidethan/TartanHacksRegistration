@@ -138,4 +138,8 @@ fieldset {
 
 #email, #password, #login-password, #register {
   font-family: $font-body;
+
+  &::placeholder {
+    color: rgba(0,0,0,.87);
+  }
 }
