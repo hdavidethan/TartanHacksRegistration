@@ -1,12 +1,12 @@
 @import 'branding';
 @import 'custom';
 
-$font-body: 'Ostrich Sans Medium', 'Helvetica Neue', 'Helvetica', sans-serif;
-$font-header: 'Ostrich Sans Heavy', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-body: 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-header: 'Helvetica Neue', 'Helvetica', sans-serif;
 
 // Login screen variables
 $login-bg-color: $secondary;
-$login-color: rgb(228, 208, 227);
+$login-color: $secondary;
 $register-color: $tertiary;
 
 $status-unverified-color: rgb(82, 82, 82);
@@ -61,7 +61,7 @@ body {
 
 body {
   margin: 0;
-  font-family: 'Ostrich Sans Medium', 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: $font-body;
   font-weight: 300;
 
   > .container {
@@ -88,7 +88,9 @@ body {
 .ui.segment {
   border-radius: 0;
   box-shadow: none;
-  background-color: rgb(66, 73, 94);
+  &.primary {
+    background-color: $primary;
+  }
 }
 input {
   border-radius: 0 !important;

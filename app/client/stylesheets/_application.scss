@@ -12,7 +12,7 @@
     margin: 2rem;
   }
   select, input {
-    font-family: "Ostrich Sans Medium","Helvetica Neue",Helvetica,sans-serif;
+    font-family: $font-body;
   }
   input::placeholder {
     color: rgba(0,0,0,.87);
@@ -21,6 +21,6 @@
   .button {
     color: $primary;
     background: $secondary;
-    font-family: "Ostrich Sans Medium","Helvetica Neue",Helvetica,sans-serif;
+    font-family: $font-body;
   }
 }
