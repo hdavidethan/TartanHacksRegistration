@@ -16,6 +16,7 @@ const SidebarCtrl = require('../views/sidebar/SidebarCtrl.js');
 const TeamCtrl = require('../views/team/TeamCtrl.js');
 const VerifyCtrl = require('../views/verify/VerifyCtrl.js');
 
+
 angular.module('reg')
   .config([
     '$stateProvider',
