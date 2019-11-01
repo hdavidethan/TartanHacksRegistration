@@ -38,11 +38,16 @@ Install the necessary dependencies:
 npm install
 ```
 
+If you haven't already, clone the TartanHacksRegistration repository and make sure you know where it is stored on your computer. Navigate to the folder in your command prompt using cd <pathname>.
+
 We use `dotenv` to keep track of environment variables, so be sure to stop tracking the `.env` file in Git:
 ```bash
 git update-index --assume-unchanged .env
 ```
 
+Make sure you are calling the previous command from within the repository folder.
+
+If you don't already have gulp installed, follow instructions here: https://gulpjs.com/docs/en/getting-started/quick-start
 
 Edit the configuration file in `.env` for your setup, and then run the application:
 ```bash
