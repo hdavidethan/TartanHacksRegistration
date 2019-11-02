@@ -14,8 +14,8 @@ Forked from MIT Quill
 Run the following commands to check the current installed versions:
 
 ```bash
-node -v
-mongo --version
+$ node -v
+$ mongo --version
 ```
 If you receive an error, it likely means that you do not have these installed!
 
@@ -26,36 +26,71 @@ How to install/upgrade to latest releases:
 For inexperienced SQL users, MongoDB Compass is highly recommended. In the installation for MongoDB, is installed as an additional feature and needs to be checked.
 
 ### Deploying locally
-Start by setting up the database. Make sure that you are in the root directory.
+Start by setting up the database. Make sure that you are in the root directory of your repository. 
 
 ```bash
-mkdir db
-mongod --dbpath db --bind_ip 127.0.0.1
+$ mkdir db
+$ mongod --dbpath db --bind_ip 127.0.0.1
 ```
+
+mongod should run in the background the entire time, so open a new window and continue with the set up.
 
 Install the necessary dependencies:
 ```bash
-npm install
+$ npm install
 ```
 
 If you haven't already, clone the TartanHacksRegistration repository and make sure you know where it is stored on your computer. Navigate to the folder in your command prompt using cd <pathname>.
 
 We use `dotenv` to keep track of environment variables, so be sure to stop tracking the `.env` file in Git:
 ```bash
-git update-index --assume-unchanged .env
+$ git update-index --assume-unchanged .env
 ```
 
-Make sure you are calling the previous command from within the repository folder.
+Make sure you are calling the previous command from within the repository folder. 
 
-If you don't already have gulp installed, follow instructions here: https://gulpjs.com/docs/en/getting-started/quick-start
+If you don't already have gulp installed, follow instructions here: https://www.npmjs.com/package/gulp-install
+
+Before calling gulp, check your node version:
+```bash
+$ node --version
+```
+
+and gulp version:
+```bash
+$ gulp --version
+```
+
+If your node version is 12+ and gulp is 3+, there will be compatibility issues so downgrade your node version using:
+```bash
+$ npm install -g n
+$ n 10.16.0
+```
 
 Edit the configuration file in `.env` for your setup, and then run the application:
 ```bash
-gulp server
+$ gulp server
 ```
 
 Once the server is running, you can use the app by going to [localhost:3000](http://localhost:3000)
 
+### Troubleshooting
+
+If mongod has an "Address already in use" error, there is already a version of mongod running in the background, so find the process ID for that command and then use that number to kill the previous process:
+```bash
+$ lsof -PiTCP -sTCP:LISTEN
+```
+Find mongod under command and remember the value under PID for it. Then, run the following command, replacing <mongod process ID> with that value.
+
+$ kill <mongod process ID>
+```
+
+If you are using a mac, make sure to add sudo in front of the commands to get around permission.s.
+
+Install dotenv if running "gulp server" gives a missing dotenv error:
+```bash
+$ npm install --dotenv-extended
+```
 
 # Usage
 ## Quill for Users
