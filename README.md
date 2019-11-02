@@ -80,13 +80,13 @@ If mongod has an "Address already in use" error, there is already a version of m
 ```bash
 $ lsof -PiTCP -sTCP:LISTEN
 ```
-Find mongod under command and remember the value under PID for it. Then, run the following command, replacing <mongod process ID> with that value.
+Find mongod under command and remember the value under PID for it. Then, run the following command, replacing MONGOD_PROCESS_ID with that value.
 
 ```bash
-$ kill <mongod process ID>
+$ kill MONGOD_PROCESS_ID
 ```
 
-If you are using a mac, make sure to add sudo in front of the commands to get around permission.s.
+If you are using a mac, make sure to add sudo in front of the commands to get around permissions.
 
 Install dotenv if running "gulp server" gives a missing dotenv error:
 ```bash
