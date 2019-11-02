@@ -82,6 +82,7 @@ $ lsof -PiTCP -sTCP:LISTEN
 ```
 Find mongod under command and remember the value under PID for it. Then, run the following command, replacing <mongod process ID> with that value.
 
+```bash
 $ kill <mongod process ID>
 ```
 
