@@ -5,10 +5,10 @@
     <img src="assets/images/logo.png">
   </div>
 
-  <div ui-sref-active="active"
+<!--  <div ui-sref-active="active"
        class="item">
     Home
-  </div>
+	</div> --!>
 
   <div ui-sref-active="active"
        ui-sref="app.dashboard"
@@ -16,6 +16,14 @@
        ng-show="!currentUser.admin">
     Register
   </div>
+
+  <div
+      ui-sref-active="active"
+      ui-sref="app.team"
+      ng-show="!currentUser.status.declined"
+      class="item">
+      Team
+  </div> 
 
   <div ng-show="currentUser.verified">
 
