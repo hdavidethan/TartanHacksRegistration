@@ -26,7 +26,7 @@ How to install/upgrade to latest releases:
 For inexperienced SQL users, MongoDB Compass is highly recommended. In the installation for MongoDB, is installed as an additional feature and needs to be checked.
 
 ### Deploying locally
-Start by setting up the database. Make sure that you are in the root directory of your repository. 
+Start by setting up the database. Make sure that you are in the root directory of your repository (the TartanHacksRegistration folder). 
 
 ```bash
 $ mkdir db
