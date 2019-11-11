@@ -1,2 +1,1 @@
-release: scripts/boot/web.sh
-web: npm start
+web: scripts/boot/web.sh
